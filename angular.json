@@ -22,7 +22,8 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/wasm"
             ],
             "styles": [
               "src/styles.css"
@@ -60,7 +61,11 @@
               "buildTarget": "veryfi-lens-demo-angular:build:production"
             },
             "development": {
-              "buildTarget": "veryfi-lens-demo-angular:build:development"
+              "buildTarget": "veryfi-lens-demo-angular:build:development",
+              "headers": {
+                "Cross-Origin-Opener-Policy": "same-origin",
+                "Cross-Origin-Embedder-Policy": "require-corp"
+              }
             }
           },
           "defaultConfiguration": "development"
